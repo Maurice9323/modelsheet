@@ -1,7 +1,7 @@
 // Model Sheet service worker — offline support for the app shell.
-// Bump CACHE when you change the icons or manifest; modelsheet.html updates on its own (network-first).
-const CACHE = 'modelsheet-v1';
-const SHELL = ['./modelsheet.html', './manifest.json', './icon-192.png', './icon-512.png'];
+// Bump CACHE when you change the icons or manifest; index.html updates on its own (network-first).
+const CACHE = 'modelsheet-v2';
+const SHELL = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 
 self.addEventListener('install', event => {
@@ -29,7 +29,7 @@ self.addEventListener('fetch', event => {
           if (res.ok) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(req, copy)); }
           return res;
         })
-        .catch(() => caches.match(req, { ignoreSearch: true }).then(r => r || caches.match('./modelsheet.html')))
+        .catch(() => caches.match(req, { ignoreSearch: true }).then(r => r || caches.match('./index.html')))
     );
     return;
   }
