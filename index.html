@@ -9,6 +9,9 @@
 <meta name="application-name" content="Model Sheet">
 <meta name="theme-color" content="#05050e">
 <title>Model Sheet</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -3523,6 +3526,7 @@ window.addEventListener('ms-remote-update',async e=>{
 });
 window.addEventListener('storage-ready',startApp,{once:true});
 setTimeout(startApp,4000);
+if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol)){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{});});}
 
 </script>
 </body>
