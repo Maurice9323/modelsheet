@@ -1,25 +1,18 @@
 {
-  "name": "The Wheel",
-  "short_name": "The Wheel",
-  "description": "The Wheel",
-  "start_url": "/the-wheel/",
-  "scope": "/The Wheel/",
+  "id": "./modelsheet.html",
+  "name": "Model Sheet",
+  "short_name": "Model Sheet",
+  "description": "Build a character one step at a time and generate image prompts and a written portrait.",
+  "start_url": "./modelsheet.html",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#05050e",
   "theme_color": "#05050e",
-  "orientation": "portrait-primary",
   "icons": [
-    {
-      "src": "/the-wheel/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/the-wheel/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
